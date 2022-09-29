@@ -51,8 +51,14 @@ align-items: center;
   }
 }
 
-
 .router-container{
   padding-left: 56px;
   padding-top: 16px;
+  padding-right: 56px;
+}
+
+.logo{
+  max-width: 100%;
+  height: 48px;
+  object-fit: cover;
 }

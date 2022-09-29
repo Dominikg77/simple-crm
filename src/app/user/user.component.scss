@@ -1,5 +1,52 @@
+$color-soft-black: rgb(0,0,0,0.05);
+
+mat-card{
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .add-user-btn{
   position: absolute;
   right: 56px;
   bottom: 56px;
+}
+
+.user-table{
+  width: 100%;
+border-collapse: collapse;
+  tr{
+    border-bottom: 1px solid $color-soft-black ;
+    cursor: pointer;
+    &:last-child{
+      border-bottom: 1px solid transparent ;
+    }
+    &:first-child{
+      cursor: unset;
+      &:hover{
+        background-color:unset  ;
+      }
+    }
+    &:hover{
+      transition: all 225ms ease-in-out;
+      background-color:$color-soft-black  ;
+    }
+
+    td{
+      height: 48px;
+      &:first-child{
+        padding-left: 16px;
+      }
+    }
+  }
+
+  th{
+    color: rgb(0,0,0,0.5);
+    font-weight: 400;
+    text-align: start;
+
+    &:first-child{
+      padding-left: 16px;
+    }
+  }
+
 }
