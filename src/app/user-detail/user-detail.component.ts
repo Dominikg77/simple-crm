@@ -27,27 +27,31 @@ export class UserDetailComponent implements OnInit {
     })
   }
 
-  getUser(){
-    this.firestore
-      .collection('user')
-      .doc(this.userId)
-      .valueChanges()
-      .subscribe((user:any)=>{
-this.user= new User (user);
-console.log('ref',this.user)
-      })
+  getUser() {
+    if (this.userId) {
+      this.firestore
+        .collection('user')
+        .doc(this.userId)
+        .valueChanges()
+        .subscribe((user: any) => {
+          this.user = new User(user);
+          console.log('ref', this.user)
+        })
+    }
   }
 
 
 
   editUserMenu(){
 const dialog= this.dialog.open(DialogEditUserComponent);
-    dialog.componentInstance.user = this.user;
+    dialog.componentInstance.user = new User(this.user.toJSON());
+    dialog.componentInstance.userId = this.userId;
   }
 
   editAddressMenu(){
     const dialog= this.dialog.open(DialogEditAddressComponent);
-    dialog.componentInstance.user = this.user;
+    dialog.componentInstance.user = new User(this.user.toJSON())
+    dialog.componentInstance.userId = this.userId;
   }
 
 }
