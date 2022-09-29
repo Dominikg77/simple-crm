@@ -17,7 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from "@angular/material/core";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -30,6 +30,11 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { LoginComponent } from './login/login.component';
+import { LandingComponent } from './landing/landing.component';
+
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,10 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     DialogAddUserComponent,
     UserDetailComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    LoginComponent,
+    LandingComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +72,9 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatProgressBarModule,
     MatCardModule,
     MatMenuModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    HotToastModule.forRoot(),
 
 
   ],

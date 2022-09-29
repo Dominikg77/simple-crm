@@ -62,3 +62,13 @@ align-items: center;
   height: 48px;
   object-fit: cover;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-login {
+  display: flex;
+  justify-content: flex-end;
+}
