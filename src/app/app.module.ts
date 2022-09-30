@@ -32,9 +32,9 @@ import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-ad
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
-
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -75,6 +75,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MatInputModule,
     ReactiveFormsModule,
     HotToastModule.forRoot(),
+    MatPaginatorModule,
 
 
   ],
