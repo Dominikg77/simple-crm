@@ -1,3 +1,5 @@
+<div *ngIf="user$ | async as user"> <!--*ngIf="user$ | async as user-->
+
 <mat-card>
   <table class="user-table">
 
@@ -23,3 +25,11 @@
 <button (click)="openDialog()" class="add-user-btn" mat-fab color="primary" matTooltip="Add User">
   <mat-icon>add</mat-icon>
 </button>
+</div>
+
+<!--Für die die sich nicht einlogen, sehen das  -->
+<div *ngIf="user$ | async as user" class="d-none">
+<div>
+  <h1>Logen sie sich ein</h1>
+</div>
+</div>
